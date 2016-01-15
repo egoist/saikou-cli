@@ -10,8 +10,13 @@
 $ npm install --global saikou-cli
 ```
 
-```
-$ saikou
+```bash
+$ saikou [number]
+# eg: saikou 4
+# eg: saikou
+
+$ saikou h
+# fetch from http://hitokoto.us
 ```
 
 ## Related
