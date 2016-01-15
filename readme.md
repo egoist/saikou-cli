@@ -18,6 +18,7 @@ $ saikou
 
 <!-- Related projects start -->
 - [saikou](https://github.com/egoist/saikou): The api used by this module
+
 <!-- Related projects end -->
 
 ## License
