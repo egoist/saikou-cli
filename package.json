@@ -1,6 +1,6 @@
 {
   "name": "saikou-cli",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "your cli and saikou!",
   "license": "MIT",
   "repository": "egoist/saikou-cli",
@@ -29,8 +29,11 @@
   ],
   "dependencies": {
     "colorful": "^2.1.0",
+    "io-spin": "^0.2.2",
     "minimist": "^1.2.0",
-    "saikou": "0.0.1"
+    "node-fetch": "^1.3.3",
+    "saikou": "0.0.1",
+    "update-notifier": "^0.6.0"
   },
   "devDependencies": {
     "ava": "^0.8.0",
