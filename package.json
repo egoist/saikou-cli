@@ -1,0 +1,43 @@
+{
+  "name": "saikou-cli",
+  "version": "0.0.1",
+  "description": "your cli and saikou!",
+  "license": "MIT",
+  "repository": "egoist/saikou-cli",
+  "author": {
+    "name": "EGOIST",
+    "email": "0x142857@gmail.com",
+    "url": "github.com/egoist"
+  },
+  "bin": {
+    "saikou": "cli.js"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "saikou",
+    "acg"
+  ],
+  "dependencies": {
+    "colorful": "^2.1.0",
+    "minimist": "^1.2.0",
+    "saikou": "0.0.1"
+  },
+  "devDependencies": {
+    "ava": "^0.8.0",
+    "execa": "^0.2.2",
+    "xo": "^0.12.1"
+  },
+  "xo": {
+    "semicolon": false
+  }
+}
