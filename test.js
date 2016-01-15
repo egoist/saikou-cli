@@ -7,6 +7,6 @@ test('moegirl', async t => {
 })
 
 test('yiyan', async t => {
-	const {stdout} = await execa.shell('node cli.js h')
+	const {stdout} = await execa.shell('node cli.js h').catch(err => t.fail())
 	t.same(typeof stdout, 'string')
 })
