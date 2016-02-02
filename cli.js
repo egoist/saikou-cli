@@ -21,19 +21,19 @@ if (number === 'h') {
 		.then(data => data.json())
 		.then(data => {
 			spin.stop()
-			if (!color) {
-				console.log(`${data.hitokoto} ${data.source ? ` ${'--'}${data.source}` : ''}`)
-			} else {
+			if (color) {
 				console.log(`${data.hitokoto.cyan} ${data.source ? ` ${'--'.grey}${data.source.magenta}` : ''}`)
+			} else {
+				console.log(`${data.hitokoto} ${data.source ? ` ${'--'}${data.source}` : ''}`)
 			}
 		})
 		.catch(err => console.log(err.stack))
 } else {
 	for (let i = 0; i < number; i++) {
-		if (!color) {
-			console.log(saikou())
-		} else{
+		if (color) {
 			console.log(saikou().cyan)
+		} else {
+			console.log(saikou())
 		}
 	}
 }
