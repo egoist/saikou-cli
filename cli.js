@@ -10,8 +10,9 @@ require('colorful').toxic()
 
 update({pkg}).notify()
 
-const argv = minimist(process.argv.slice(2))
+const argv = minimist(process.argv.slice(2), {'--': true})
 const number = argv._[0] || 1
+const color = typeof argv.color === 'undefined' || argv.color
 
 if (number === 'h') {
 	const spin = new Spin()
@@ -20,11 +21,19 @@ if (number === 'h') {
 		.then(data => data.json())
 		.then(data => {
 			spin.stop()
-			console.log(`${data.hitokoto.cyan} ${data.source ? ` ${'--'.grey}${data.source.magenta}` : ''}`)
+			if (!color) {
+				console.log(`${data.hitokoto} ${data.source ? ` ${'--'}${data.source}` : ''}`)
+			} else {
+				console.log(`${data.hitokoto.cyan} ${data.source ? ` ${'--'.grey}${data.source.magenta}` : ''}`)
+			}
 		})
 		.catch(err => console.log(err.stack))
 } else {
 	for (let i = 0; i < number; i++) {
-		console.log(saikou().cyan)
+		if (!color) {
+			console.log(saikou())
+		} else{
+			console.log(saikou().cyan)
+		}
 	}
 }
